@@ -10,6 +10,7 @@ const statusDisplay = document.getElementById('status');
 const timerDisplay = document.getElementById('timer');
 const themeToggle = document.getElementById('theme-toggle');
 
+
 let timerInterval;
 let timeRemaining = 25 * 60; // 25 minutes in seconds
 let isRunning = false;
@@ -65,17 +66,20 @@ function resetTimer() {
     statusDisplay.textContent = 'Timer reset.';
 }
 
+
 // Toggle dark mode
 function toggleTheme() {
     document.body.classList.toggle('dark-mode');
     themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 }
 
+
 // Event listeners
 startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
 resetButton.addEventListener('click', resetTimer);
 themeToggle.addEventListener('click', toggleTheme);
+
 
 // Initialize the display
 updateDisplay();
